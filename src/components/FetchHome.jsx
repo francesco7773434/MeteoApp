@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 
-import { Col, Container, Form, ListGroup, ListGroupItem, Row } from "react-bootstrap";
+import { Card, Col, Container, Form, ListGroup, ListGroupItem, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 const FetchHome = () => {
@@ -47,6 +47,37 @@ const FetchHome = () => {
               </ListGroupItem>
             ))}
           </ListGroup>
+        </Col>
+      </Row>
+      <Row className="g-4 mt-4">
+        <Col className="col-md-6 col-12 ">
+          <Card className="bg-primary text-white cursor">
+            <Card.Body>Milano</Card.Body>
+          </Card>
+        </Col>
+        <Col className="col-md-6 col-12">
+          <Card className="bg-primary text-white cursor">
+            <Card.Body>Napoli</Card.Body>
+          </Card>
+        </Col>
+        <Col className="col-md-6 col-12">
+          <Card className="bg-primary text-white cursor">
+            <Card.Body>Roma</Card.Body>
+          </Card>
+        </Col>
+        <Col className="col-md-6 col-12">
+          <Card className="bg-primary text-white cursor">
+            <Card.Body>Torino</Card.Body>
+          </Card>
+        </Col>
+      </Row>
+      <Row className="mt-5">
+        <Col className="mb-2 text-center mt-5">
+          <i className="bi bi-facebook footer-icon me-4 text-white fs-2"></i>
+          <i className="bi bi-instagram footer-icon me-4 text-white fs-2"></i>
+          <i className="bi bi-twitter-x footer-icon me-4 text-white fs-2"></i>
+          <i className="bi bi-youtube footer-icon text-white fs-2"></i>
+          <h3 className="mt-5 text-white">Previsioni meteo di Frank</h3>
         </Col>
       </Row>
     </Container>

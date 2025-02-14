@@ -5,7 +5,7 @@
 }
 
 .background-container {
-  background-image: url("https://preview.redd.it/ihfnlpbze7o01.jpg?auto=webp&s=94fe8990d7b61c4debfb310f656aedf8327ac722");
+  background-image: url("https://png.pngtree.com/thumb_back/fw800/back_pic/04/12/74/19581c7a18185f1.jpg");
   background-size: cover;
   background-position: center;
   min-height: 100vh;
@@ -16,4 +16,8 @@
   background-size: cover;
   background-position: center;
   min-height: 50vh;
+}
+
+.cursor {
+  cursor: pointer;
 }
