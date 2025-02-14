@@ -32,7 +32,7 @@ const MeteoDetails = () => {
   console.log(meteo.name);
 
   return (
-    <Container className="mt-5 ">
+    <Container className="mt-5 text-center ">
       <Card className=" p-4 background-minicontainer">
         <Card.Body>
           <Card.Title as="h1">
