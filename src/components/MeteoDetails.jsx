@@ -32,8 +32,8 @@ const MeteoDetails = () => {
   console.log(meteo.name);
 
   return (
-    <Container className="mt-5">
-      <Card className=" p-4">
+    <Container className="mt-5 ">
+      <Card className=" p-4 background-minicontainer">
         <Card.Body>
           <Card.Title as="h1">
             {meteo.name}, {meteo.sys.country}

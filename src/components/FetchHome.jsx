@@ -33,7 +33,7 @@ const FetchHome = () => {
         <Col className="col-8">
           <Form>
             <Form.Group className="mb-3">
-              <Form.Label>Cerca una città</Form.Label>
+              <Form.Label></Form.Label>
               <Form.Control type="text" placeholder="Cerca una città..." value={searchValue} onChange={(e) => setSearchValue(e.target.value)} />
             </Form.Group>
           </Form>
