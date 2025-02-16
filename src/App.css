@@ -29,32 +29,10 @@
   min-height: 25vh;
 }
 
-.clear-sky {
-  background: url("https://source.unsplash.com/1600x900/?sunny,sky") no-repeat center center fixed;
-  background-size: cover;
+.hover-effect {
+  transition: transform 0.3s ease-in-out;
 }
 
-.cloudy {
-  background: url("https://source.unsplash.com/1600x900/?cloudy,sky") no-repeat center center fixed;
-  background-size: cover;
-}
-
-.rainy {
-  background: url("https://source.unsplash.com/1600x900/?rain") no-repeat center center fixed;
-  background-size: cover;
-}
-
-.snowy {
-  background: url("https://source.unsplash.com/1600x900/?snow") no-repeat center center fixed;
-  background-size: cover;
-}
-
-.stormy {
-  background: url("https://source.unsplash.com/1600x900/?storm,thunder") no-repeat center center fixed;
-  background-size: cover;
-}
-
-.default-bg {
-  background: url("https://source.unsplash.com/1600x900/?nature") no-repeat center center fixed;
-  background-size: cover;
+.hover-effect:hover {
+  transform: scale(1.1);
 }

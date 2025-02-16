@@ -64,12 +64,16 @@ const Home = () => {
         </Col>
       </Row>
       <Row className="g-4 mt-4">
-        <Col className="col-md-6 col-12 ">
-          <Card className="bg-primary text-white cursor">
-            <Card.Body>Milano</Card.Body>
-          </Card>
-        </Col>
-        <Col className="col-md-6 col-12">
+        {["Milano", "Napoli", "Roma", "Torino"].map((city) => (
+          <Col key={city} className="col-md-6 col-12">
+            <Link to={`/meteo-details/${city}`}>
+              <Card className="bg-primary text-white cursor hover-effect">
+                <Card.Body>{city}</Card.Body>
+              </Card>
+            </Link>
+          </Col>
+        ))}
+        {/*<Col className="col-md-6 col-12">
           <Card className="bg-primary text-white cursor">
             <Card.Body>Napoli</Card.Body>
           </Card>
@@ -83,7 +87,7 @@ const Home = () => {
           <Card className="bg-primary text-white cursor">
             <Card.Body>Torino</Card.Body>
           </Card>
-        </Col>
+        </Col>*/}
       </Row>
       <Row className="mt-5">
         <Col className="mb-2 text-center mt-5">
