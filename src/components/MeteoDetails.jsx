@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { Container, Card, Image, Row, Col } from "react-bootstrap";
+import { Container, Card, Image, Row, Col, Alert } from "react-bootstrap";
 
 const MeteoDetails = () => {
   const { city } = useParams();
@@ -34,6 +34,7 @@ const MeteoDetails = () => {
       if (resp.ok) {
         const data = await resp.json();
         setPrevisioni(data.list.slice(0, 5));
+        console.log(previsioni);
       } else {
         throw new Error("Errore nella fetch");
       }
@@ -49,7 +50,11 @@ const MeteoDetails = () => {
   }, [city]);
 
   if (!meteo) {
-    return <p>Caricamento...</p>;
+    return (
+      <Alert className="mt-5 " variant="danger">
+        Previsione meteo non disponibile...
+      </Alert>
+    );
   }
 
   const iconUrl = `https://openweathermap.org/img/wn/${meteo.weather[0].icon}@2x.png`;
