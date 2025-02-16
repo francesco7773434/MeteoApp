@@ -21,3 +21,10 @@
 .cursor {
   cursor: pointer;
 }
+
+.bg-container {
+  background-image: url("https://png.pngtree.com/thumb_back/fw800/back_pic/04/12/74/19581c7a18185f1.jpg");
+  background-size: cover;
+  background-position: center;
+  min-height: 25vh;
+}

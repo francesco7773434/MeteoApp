@@ -2,7 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import TopBar from "./components/TopBar";
 
-import FetchHome from "./components/FetchHome";
+import Home from "./components/Home";
 import MeteoDetails from "./components/MeteoDetails";
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
       <TopBar />
 
       <Routes>
-        <Route path="/" element={<FetchHome />} />
+        <Route path="/" element={<Home />} />
         <Route path="/meteo-details/:city" element={<MeteoDetails />} />
       </Routes>
     </BrowserRouter>

@@ -2,24 +2,32 @@
 
 import { useEffect, useState } from "react";
 
-import { Card, Col, Container, Form, ListGroup, ListGroupItem, Row } from "react-bootstrap";
+import { Card, Col, Container, Form, InputGroup, ListGroup, ListGroupItem, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
-const FetchHome = () => {
+const Home = () => {
   const [searchValue, setSearchValue] = useState("");
   const [cityObj, setcityObj] = useState([]);
+  const [error, setError] = useState(null);
 
   const getCity = async () => {
     if (!searchValue) return;
     console.log(searchValue);
 
-    const resp = await fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${searchValue}&limit=5&appid=3e78190dd5e9fa9ca379d1ed00a20d79`);
+    try {
+      const resp = await fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${searchValue}&limit=5&appid=3e78190dd5e9fa9ca379d1ed00a20d79`);
 
-    if (resp.ok) {
-      const cityObj = await resp.json();
-      console.log(cityObj);
-      setcityObj(cityObj);
-      console.log(cityObj);
+      if (resp.ok) {
+        const cityObj = await resp.json();
+
+        setcityObj(cityObj);
+        console.log(cityObj);
+      } else {
+        console.log(error);
+        throw new Error("Errore nella fetch");
+      }
+    } catch (error) {
+      setError(error.message);
     }
   };
 
@@ -34,7 +42,13 @@ const FetchHome = () => {
           <Form>
             <Form.Group className="mb-3">
               <Form.Label></Form.Label>
-              <Form.Control type="text" placeholder="Cerca una città..." value={searchValue} onChange={(e) => setSearchValue(e.target.value)} />
+              <InputGroup>
+                <InputGroup.Text>
+                  <i className="bi bi-search cursor"></i>
+                </InputGroup.Text>
+
+                <Form.Control type="text" placeholder="Cerca una città..." value={searchValue} onChange={(e) => setSearchValue(e.target.value)} />
+              </InputGroup>
             </Form.Group>
           </Form>
 
@@ -77,11 +91,11 @@ const FetchHome = () => {
           <i className="bi bi-instagram footer-icon me-4 text-white fs-2"></i>
           <i className="bi bi-twitter-x footer-icon me-4 text-white fs-2"></i>
           <i className="bi bi-youtube footer-icon text-white fs-2"></i>
-          <h3 className="mt-5 text-white">Previsioni meteo di Frank</h3>
+          <h3 className="mt-5 text-white">Previsioni meteo Italia</h3>
         </Col>
       </Row>
     </Container>
   );
 };
 
-export default FetchHome;
+export default Home;
