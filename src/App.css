@@ -36,3 +36,8 @@
 .hover-effect:hover {
   transform: scale(1.1);
 }
+
+.small-img {
+  height: 300px;
+  object-fit: cover;
+}

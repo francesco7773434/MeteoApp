@@ -98,6 +98,28 @@ const Home = () => {
           <h3 className="mt-5 text-white">Previsioni meteo Italia</h3>
         </Col>
       </Row>
+      <Row>
+        <Card className="p-0 border-0 mb-3">
+          <Card.Body className="p-0 border-0">
+            <Card.Text className="mt-3 p-3">Meteo-Italia-Puglia-Canosa di puglia</Card.Text>
+            <Card.Title className="mt-2 mb-4 p-3">Meteo Canosa di Puglia e previsioni del tempo per oggi, domani ei prossimi 15 giorni</Card.Title>
+            <Link className="p-3">Vota le previsioni</Link>
+            <Row className="mt-4 p-3">
+              <Col className="mb-2  mt-2">
+                <i className="bi bi-facebook footer-icon me-4  fs-2"></i>
+                <i className="bi bi-instagram footer-icon me-4  fs-2"></i>
+                <i className="bi bi-twitter-x footer-icon me-4  fs-2"></i>
+                <i className="bi bi-youtube footer-icon  fs-2"></i>
+              </Col>
+            </Row>
+            <Card.Img
+              className="small-img"
+              variant="top"
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Grantham_MMB_01_Nottingham_to_Grantham_Line_158847.jpg/800px-Grantham_MMB_01_Nottingham_to_Grantham_Line_158847.jpg"
+            />
+          </Card.Body>
+        </Card>
+      </Row>
     </Container>
   );
 };
