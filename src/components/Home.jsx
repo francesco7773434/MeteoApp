@@ -103,7 +103,7 @@ const Home = () => {
           <Card.Body className="p-0 border-0">
             <Card.Text className="mt-3 p-3">Meteo-Italia-Puglia-Canosa di puglia</Card.Text>
             <Card.Title className="mt-2 mb-4 p-3">Meteo Canosa di Puglia e previsioni del tempo per oggi, domani ei prossimi 15 giorni</Card.Title>
-            <Link className="p-3">Vota le previsioni</Link>
+            <Link className="p-3 cursor">Vota le previsioni</Link>
             <Row className="mt-4 p-3">
               <Col className="mb-2  mt-2">
                 <i className="bi bi-facebook footer-icon me-4  fs-2"></i>
