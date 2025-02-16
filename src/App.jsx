@@ -4,6 +4,7 @@ import TopBar from "./components/TopBar";
 
 import Home from "./components/Home";
 import MeteoDetails from "./components/MeteoDetails";
+import FooterComponent from "./components/MyFooter";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/meteo-details/:city" element={<MeteoDetails />} />
       </Routes>
+      <FooterComponent />
     </BrowserRouter>
   );
 }

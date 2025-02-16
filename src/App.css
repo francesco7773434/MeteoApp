@@ -23,10 +23,10 @@
 }
 
 .bg-container {
-  background-image: url("https://png.pngtree.com/thumb_back/fw800/back_pic/04/12/74/19581c7a18185f1.jpg");
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRa6iUUC3mWH57YHhOM7pW8e9OQ-2d6lXEAvXTWAvXtWmkafCQbhekJrAyXtq1588UVghM&usqp=CAU");
   background-size: cover;
   background-position: center;
-  min-height: 25vh;
+  min-height: 15vh;
 }
 
 .hover-effect {
@@ -40,4 +40,12 @@
 .small-img {
   height: 300px;
   object-fit: cover;
+}
+
+.custom-link {
+  color: black;
+}
+
+.custom-link:hover {
+  color: gray;
 }

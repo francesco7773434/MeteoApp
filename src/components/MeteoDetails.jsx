@@ -63,32 +63,35 @@ const MeteoDetails = () => {
 
   return (
     <Container className="mt-5 text-center ">
-      <Card className=" p-4 background-minicontainer">
-        <Card.Body>
-          <Card.Title as="h1">
-            {meteo.name}, {meteo.sys.country}
-          </Card.Title>
-          <h4 className="mt-4">Weather</h4>
-          <Image src={iconUrl} fluid />
+      <Row>
+        <Col md={12}>
+          <Card className=" p-4 background-minicontainer">
+            <Card.Body>
+              <Card.Title as="h1">
+                {meteo.name}, {meteo.sys.country}
+              </Card.Title>
+              <h4 className="mt-4">Weather</h4>
+              <Image src={iconUrl} fluid />
 
-          <Card.Text className="mt-4 display-5">{meteo.main.temp}°C</Card.Text>
-          <Card.Text as="h4">{meteo.weather[0].description}</Card.Text>
+              <Card.Text className="mt-4 display-5">{meteo.main.temp}°C</Card.Text>
+              <Card.Text as="h4">{meteo.weather[0].description}</Card.Text>
 
-          <Card.Text className="mt-5">
-            Temperature: 🌡 Min: {meteo.main.temp_min}°C | Max: {meteo.main.temp_max}°C
-          </Card.Text>
-          <Card.Text> Vento: 💨 {meteo.wind.speed} m/s</Card.Text>
-        </Card.Body>
-      </Card>
-      <h3 className="mt-5">Previsioni per i prossimi giorni</h3>
-      <Row className="mt-3 justify-content-center">
+              <Card.Text className="mt-5">
+                Temperature: 🌡 Min: {meteo.main.temp_min}°C | Max: {meteo.main.temp_max}°C
+              </Card.Text>
+              <Card.Text> Vento: 💨 {meteo.wind.speed} m/s</Card.Text>
+            </Card.Body>
+          </Card>
+        </Col>
+      </Row>
+      <h3 className="mt-5 ">Previsioni per i prossimi giorni</h3>
+      <Row className="mt-5 justify-content-center">
         {previsioni.map((giorno, index) => (
-          <Col key={index} md={2} className="mb-3">
-            <Card className="text-center p-3 bg-container">
+          <Col key={index} md={2} className="mb-3 g-6 m-2">
+            <Card className="text-center p-3 bg-container ">
               <Card.Body>
                 <Image src={`https://openweathermap.org/img/wn/${giorno.weather[0].icon}@2x.png`} fluid />
                 <Card.Text>{giorno.main.temp}°C</Card.Text>
-                <Card.Text>{giorno.weather[0].description}</Card.Text>
               </Card.Body>
             </Card>
           </Col>
