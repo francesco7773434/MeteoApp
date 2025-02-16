@@ -106,10 +106,10 @@ const Home = () => {
             <Link className="p-3 cursor">Vota le previsioni</Link>
             <Row className="mt-4 p-3">
               <Col className="mb-2  mt-2">
-                <i className="bi bi-facebook footer-icon me-4  fs-2"></i>
-                <i className="bi bi-instagram footer-icon me-4  fs-2"></i>
-                <i className="bi bi-twitter-x footer-icon me-4  fs-2"></i>
-                <i className="bi bi-youtube footer-icon  fs-2"></i>
+                <i className="bi bi-facebook footer-icon me-4  fs-4"></i>
+                <i className="bi bi-instagram footer-icon me-4  fs-4"></i>
+                <i className="bi bi-twitter-x footer-icon me-4  fs-4"></i>
+                <i className="bi bi-youtube footer-icon  fs-4"></i>
               </Col>
             </Row>
             <Card.Img
@@ -117,6 +117,7 @@ const Home = () => {
               variant="top"
               src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Grantham_MMB_01_Nottingham_to_Grantham_Line_158847.jpg/800px-Grantham_MMB_01_Nottingham_to_Grantham_Line_158847.jpg"
             />
+            <Card.Title className="mt-2 mb-4 p-3 cursor">Mostra altro ⬇ </Card.Title>
           </Card.Body>
         </Card>
       </Row>
